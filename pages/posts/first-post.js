@@ -1,4 +1,7 @@
-import Link from 'next/link'
+import Link from 'next/link';
+
+// `getStaticProps`, and similar Next.js methods like `getStaticPaths` and `getServerSideProps`
+// only run in Node.js. Check the terminal to see the environment variables
 
 export default function FirstPost() {
   return (
@@ -9,6 +12,7 @@ export default function FirstPost() {
           <a>Back to home</a>
         </Link>
       </h2>
+      <p>{process.env.NEXT_PUBLIC_DB_HOST}</p>
     </>
-  )
+  );
 }
